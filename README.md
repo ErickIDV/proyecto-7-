@@ -8,12 +8,13 @@ Esta aplicación web, desarrollada con Streamlit, permite analizar un conjunto d
 ## Cómo ejecutar la aplicación
 
 1. Asegúrate de tener instaladas las dependencias necesarias: `pandas`, `plotly`, y `streamlit`.
-2. Ejecuta el comando `streamlit run EDA.ipynb` desde la terminal.
+2. Ejecuta el comando `streamlit run app.py` desde la terminal.
 3. Interactúa con los botones para generar gráficos dinámicos.
 
 ## Estructura del proyecto
 
-- **EDA.ipynb**: Contiene el código principal de la aplicación.
+- **app.py**: Archivo principal para ejecutar la aplicación Streamlit.
+- **EDA.ipynb**: Contiene el análisis exploratorio de datos.
 - **vehicles_us.csv**: Conjunto de datos utilizado para el análisis.
 
 ¡Explora los datos y obtén información valiosa sobre los vehículos en venta!
