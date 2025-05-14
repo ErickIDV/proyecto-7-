@@ -44,10 +44,12 @@ st.write('Analizamos la cantidad de vehículos en cada categoría de condición.
 condition_bar_button = st.button('Construir gráfico de barras (Condición)')
 
 if condition_bar_button:
-    fig = px.bar(car_data['condition'].value_counts().reset_index(), 
-                 x='index', y='condition', 
+    condition_counts = car_data['condition'].value_counts().reset_index()
+    condition_counts.columns = ['condition', 'count']  # Renombrar columnas
+    fig = px.bar(condition_counts, 
+                 x='condition', y='count', 
                  title="Distribución por Condición del Vehículo",
-                 labels={"index": "Condición", "condition": "Cantidad"})
+                 labels={"condition": "Condición", "count": "Cantidad"})
     st.plotly_chart(fig, use_container_width=True)
 
 # Relación entre cilindros y precio promedio
